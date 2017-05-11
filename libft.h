@@ -89,4 +89,5 @@ void				ft_lst_push_back(t_list **lst, t_list *elem);
 int					ft_size_int(int n);
 int					ft_is_lowercase(int c);
 int					ft_is_uppercase(int c);
+int					ft_lstlen(t_list *list);
 #endif

@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_push_back.c                                 :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbeller <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/27 11:45:36 by pbeller           #+#    #+#             */
-/*   Updated: 2016/11/27 11:45:44 by pbeller          ###   ########.fr       */
+/*   Created: 2016/11/27 16:00:29 by pbeller           #+#    #+#             */
+/*   Updated: 2016/11/27 16:00:31 by pbeller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lst_push_back(t_list **lst, t_list *elem)
+int		ft_lstlen(t_list *list)
 {
-	t_list	*tmp;
+	int x;
 
-	if (!lst)
-		return ; 
-	if (!(*lst))
-		*lst = elem;
-	else
+	x = 0;
+	while (list->next)
 	{
-		tmp = *lst;
-		while (tmp->next)
-		{
-			tmp = tmp->next;
-		}
-		tmp->next = elem;
+		x++;
+		list = list->next;
 	}
+	return (x);
 }

@@ -76,7 +76,8 @@ OBJ =	ft_putchar.o \
 		ft_size_int.o \
 		ft_is_white_space.o \
 		ft_is_lowercase.o \
-		ft_is_uppercase.o
+		ft_is_uppercase.o \
+		ft_lstlen.o
 
 CC = gcc
 
